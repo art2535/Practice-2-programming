@@ -1,0 +1,48 @@
+﻿<Page x:Class="Задание_3.C_.Lesson1Page"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Задание_3.C_"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="820"
+      Title="Lesson1Page">
+
+    <Grid>
+        <!--Градиентная заливка-->
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="#8667FF" Offset="0"/>
+                <GradientStop Color="#7449CC" Offset="1"/>
+                <GradientStop Color="#393799" Offset="2"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="90"/>
+        </Grid.RowDefinitions>
+        <Label Content="Урок 1. Основные принципы ООП" Grid.Row="0"
+               FontSize="24" Foreground="White" HorizontalAlignment="Center"/>
+        
+        <!--Содержимое урока-->
+        <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Row="1">
+            <RichTextBox Name="DocumentTextBox" Background="Transparent"
+                         BorderThickness="0" Margin="40 0 40 0"
+                         Foreground="White" IsReadOnly="True"/>
+        </ScrollViewer>
+        
+        <!--Кнопки навигации-->
+        <StackPanel Orientation="Horizontal" Grid.Row="2" VerticalAlignment="Top"
+                    HorizontalAlignment="Center" Margin="70 0 0 0" Height="50">
+            <Button Name="MenuButton" Content="Содержание" FontSize="16"
+                    Width="150" Height="34" HorizontalAlignment="Center"
+                    Background="#7F64E5" Foreground="White"
+                    Click="MenuButton_Click"/>
+            <Button Name="ButtonNextLesson" Margin="50 0 0 0" Height="40"
+                    Click="ButtonNextLesson_Click">
+                <Image Source="Images\ButtonNext.png"/>
+            </Button>
+        </StackPanel>
+    </Grid>
+</Page>

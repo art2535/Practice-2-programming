@@ -1,0 +1,26 @@
+﻿<Application x:Class="Задание_3.C_.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Задание_3.C_"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <!--Стиль для кнопок-->
+        <Style TargetType="Button">
+            <!--Стиль "Закругление границ кнопок"-->
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="20">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <!--Стиль "Высота кнопки"-->
+            <Setter Property="Height" Value="34"/>
+        </Style>
+    </Application.Resources>
+</Application>
